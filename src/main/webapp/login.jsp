@@ -23,14 +23,14 @@
     <div class="row text-center">
         <div class="col-md-4 m-auto">
             <div id="login-form" class="container">
-                <form class="form-signin">
+                <form class="form-signin" method="post" action="login">
                     <img class="mb-4" src="https://getbootstrap.com/docs/4.5/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
                     <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-                    <label for="inputEmail" class="sr-only">Email address</label>
-                    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required
+                    <label for="inputLogin" class="sr-only">Login</label>
+                    <input type="text" id="inputLogin" name="login" class="form-control" placeholder="Login" required
                            autofocus>
                     <label for="inputPassword" class="sr-only">Password</label>
-                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                    <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
                     <div class="checkbox mb-3">
                         <label>
                             <input type="checkbox" value="remember-me"> Remember me
