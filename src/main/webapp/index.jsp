@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: yanek
-  Date: 23.08.2020
-  Time: 15:29
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <!doctype html>
@@ -38,13 +31,8 @@
                 <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
             </div>
         </div>
-
-        <hr>
-
     </div> <!-- /container -->
-
 </main>
-
 <jsp:include page="include/footer.jsp"/>
 </body>
 </html>
