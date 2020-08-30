@@ -28,10 +28,11 @@ public class LoginServlet extends HttpServlet {
         String login = req.getParameter("login");
         String password = req.getParameter("password");
         TbUser tbUser = userService.getUser(login, password);
+        HttpSession session = req.getSession();
         if (tbUser == null) {
+            session.setAttribute("message", "Niepoprawne dane logowania, spróbuj ponownie.");
             resp.sendRedirect("login.jsp");
         } else {
-            HttpSession session = req.getSession();
             session.setAttribute("user", tbUser);
 
             final String currentPage = (String) session.getAttribute(CURRENT_PAGE);
