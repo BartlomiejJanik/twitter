@@ -38,7 +38,7 @@
                 <div>
                     <h2>Heading</h2>
                     <p>${article.getContent()} </p>
-                    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                    <p><a class="btn btn-secondary" href="article?id=${article.getId()}" role="button">View details &raquo;</a></p>
                 </div>
             </div>
         </div>
