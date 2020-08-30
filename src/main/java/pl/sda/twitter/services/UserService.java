@@ -1,7 +1,7 @@
 package pl.sda.twitter.services;
 
 import pl.sda.twitter.persistance.dao.UserDao;
-import pl.sda.twitter.persistance.entiities.TbUser;
+import pl.sda.twitter.persistance.entities.TbUser;
 
 public class UserService {
 

@@ -1,4 +1,4 @@
-package pl.sda.twitter.persistance.entiities;
+package pl.sda.twitter.persistance.entities;
 
 import lombok.Data;
 

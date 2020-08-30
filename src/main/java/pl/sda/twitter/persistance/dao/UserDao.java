@@ -4,7 +4,7 @@ package pl.sda.twitter.persistance.dao;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 import pl.sda.twitter.persistance.HibernateUtil;
-import pl.sda.twitter.persistance.entiities.TbUser;
+import pl.sda.twitter.persistance.entities.TbUser;
 
 import javax.persistence.NoResultException;
 import javax.persistence.NonUniqueResultException;

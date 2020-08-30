@@ -1,5 +1,5 @@
 <%@ page import="java.util.List" %>
-<%@ page import="pl.sda.twitter.persistance.entiities.TbArticle" %>
+<%@ page import="pl.sda.twitter.persistance.entities.TbArticle" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:useBean id="articleService" scope="request" class="pl.sda.twitter.services.ArticleService"/>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -27,7 +27,7 @@
         </div>
     </div>
     <%
-        List<TbArticle> articles = articleService.getArticles();
+        List articles = articleService.getArticles();
         pageContext.setAttribute("articles", articles);
     %>
 
