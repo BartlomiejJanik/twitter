@@ -7,7 +7,8 @@
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
         <property name="connection.url">jdbc:mysql://remotemysql.com:3306/qUfWb2smJQ</property>
         <property name="connection.username">qUfWb2smJQ</property>
-        <property name="connection.password">A37r184rzQ</property>
+<!--        hasło zostało przeniesione do zmiennych systemowych pod nazwa database_password-->
+<!--        <property name="connection.password">password</property>-->
         <!-- Select our SQL dialect -->
         <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
         <!-- Echo the SQL to stdout -->

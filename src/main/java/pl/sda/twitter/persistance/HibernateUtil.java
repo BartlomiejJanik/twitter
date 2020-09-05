@@ -7,7 +7,7 @@ public class HibernateUtil {
     private static final SessionFactory SESSION_FACTORY = buildSessionFactory();
 
     private static SessionFactory buildSessionFactory() {
-        return new Configuration().configure().buildSessionFactory();
+        return new Configuration().setProperty("hibernate.connection.password",System.getenv("database_password")).configure().buildSessionFactory();
     }
 
     public static SessionFactory getSessionFactory() {
