@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <html lang="en">
 <head>
@@ -17,6 +18,7 @@
             <div class="container">
                 <p>Użytkownik <b>{{article.user.login}}</b> napisał:</p>
                 <p>{{article.content}}</p>
+                <p>{{article.isOwner}}</p>
             </div>
         </div>
     </div>
