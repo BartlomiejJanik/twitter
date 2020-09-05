@@ -20,13 +20,14 @@ public class ArticleDao {
         }
     }
 
-    public void addNewArticle(TbUser tbUser, String content) {
+    public void addNewArticle(TbUser tbUser, String content,ArticleStatus articleStatus) {
         try (final Session session = HibernateUtil.getSessionFactory().openSession()) {
             session.beginTransaction();
 
             final TbArticle tbArticle = new TbArticle();
             tbArticle.setContent(content);
             tbArticle.setUser(tbUser);
+            tbArticle.setStatus(articleStatus.name());
             session.save(tbArticle);
             session.getTransaction().commit();
         }

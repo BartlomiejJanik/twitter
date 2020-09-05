@@ -20,8 +20,8 @@ public class ArticleService {
         return articleDao.getArticles(status);
     }
 
-    public void addArticle(TbUser tbUser, String content) {
-        articleDao.addNewArticle(tbUser, content);
+    public void addArticle(TbUser tbUser, String content, ArticleStatus articleStatus) {
+        articleDao.addNewArticle(tbUser, content, articleStatus);
     }
 
     public TbArticle getArticleById(Integer articleId) {
