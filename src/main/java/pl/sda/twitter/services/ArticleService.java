@@ -11,7 +11,7 @@ public class ArticleService {
 
     private final ArticleDao articleDao = new ArticleDao();
 
-    public List getArticles(){
+    public List<TbArticle> getArticles(){
         return articleDao.getArticles();
     }
 
