@@ -14,7 +14,9 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
-@WebServlet(urlPatterns = "/rest/articles")
+import static java.nio.charset.StandardCharsets.UTF_8;
+
+@WebServlet(urlPatterns = "/rest/articles/")
 public class ArticlesServlet extends HttpServlet {
     private ArticleService articleService = new ArticleService();
 
@@ -22,15 +24,16 @@ public class ArticlesServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<TbArticle> articles = articleService.getArticles();
         sendAsJson(articles,resp);
+
     }
     private void sendAsJson(List models,HttpServletResponse response) throws IOException {
         response.setContentType("application/json");
+        response.setCharacterEncoding(UTF_8.name());
         final Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
         final String jsonString = gson.toJson(models);
         PrintWriter writer = response.getWriter();
         writer.print(jsonString);
         writer.flush();
-
 
     }
 }

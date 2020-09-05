@@ -14,7 +14,7 @@
 <body>
 <jsp:include page="include/header.jsp"/>
 
-<main role="main">
+<main role="main" ng-app="articleApp">
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
@@ -26,26 +26,22 @@
             <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
         </div>
     </div>
-    <%
-        List articles = articleService.getArticles();
-        pageContext.setAttribute("articles", articles);
-    %>
-
-
-    <c:forEach items="${articles}" var="article">
-        <div class="container">
-            <div class="row">
-                <div>
-                    <h2>Heading</h2>
-                    <p>${article.getContent()} </p>
-                    <p><a class="btn btn-secondary" href="article?id=${article.getId()}" role="button">View details &raquo;</a></p>
+    <div ng-controller="articleController" ng-init="init()">
+        <div ng-repeat="article in articles">
+            <div class="jumbotron">
+                <div class="container">
+                    <h1 class="display-3">Hello world</h1>
+                    <p>{{article.content}}</p>
+                    <p><a class="btn btn-secondary" href="article?id={{article.id}}" role="button">View details &raquo;</a></p>
                 </div>
             </div>
         </div>
-    </c:forEach>
+    </div>
 
 </main>
 <jsp:include page="include/footer.jsp"/>
+<script src="${pageContext.request.contextPath}/js/angular.js"></script>
+<script src="${pageContext.request.contextPath}/js/controller.js"></script>
 </body>
 </html>
 
