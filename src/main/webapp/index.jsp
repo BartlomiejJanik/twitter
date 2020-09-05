@@ -1,8 +1,4 @@
-<%@ page import="java.util.List" %>
-<%@ page import="pl.sda.twitter.persistance.entities.TbArticle" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<jsp:useBean id="articleService" scope="request" class="pl.sda.twitter.services.ArticleService"/>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <html lang="en">
 <head>
@@ -32,7 +28,7 @@
                 <div class="container">
                     <h1 class="display-3">Hello world</h1>
                     <p>{{article.content}}</p>
-                    <p><a class="btn btn-secondary" href="article?id={{article.id}}" role="button">View details &raquo;</a></p>
+                    <p><a class="btn btn-secondary" href="${pageContext.request.contextPath}/article.jsp?id={{article.id}}" role="button">View details &raquo;</a></p>
                 </div>
             </div>
         </div>

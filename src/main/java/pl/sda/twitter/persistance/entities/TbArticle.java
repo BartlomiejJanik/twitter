@@ -21,4 +21,6 @@ public class TbArticle {
     @Column(name = "AR_CONTENT", length = 1000)
     @Expose
     private String content;
+    @Column(name = "AR_STATUS", length = 5, nullable = false)
+    private String status;
 }
